@@ -19,11 +19,10 @@ private fun parseInput(): List<GameRound> {
             throw IllegalArgumentException("Ungültige Zeile in Input-File: $line")
         }
         val opponentMove = mapInputToGameMove(splitLine[0].first())
-        val playerMove = mapInputToGameMove(splitLine[1].first())
+        val playerMove = mapNeededOutcomeInputToGameMove(splitLine[1].first(), opponentMove)
 
         allGameRounds.add(GameRound(Pair(opponentMove, playerMove)))
     }
 
     return allGameRounds
 }
-
