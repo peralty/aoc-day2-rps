@@ -7,7 +7,7 @@ data class GameRound (
             this.round.second == this.round.first -> RoundOutcome.DRAW
             else -> RoundOutcome.LOSE
         }
-        val roundMovePoints = mapGameMoveToPints(this.round.second)
+        val roundMovePoints = mapGameMoveToPoints(this.round.second)
         val roundOutcomePoints = mapRoundOutcomeToPoints(roundOutcome)
         return roundMovePoints + roundOutcomePoints
     }

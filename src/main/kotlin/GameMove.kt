@@ -28,7 +28,7 @@ fun mapNeededOutcomeInputToGameMove(input: Char, opponentMove: GameMove): GameMo
     }
 }
 
-fun mapGameMoveToPints(input: GameMove): Int {
+fun mapGameMoveToPoints(input: GameMove): Int {
     return when (input) {
         GameMove.ROCK -> 1
         GameMove.PAPER -> 2
